@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "mailhog": "^4.16.0"
+  }
+}

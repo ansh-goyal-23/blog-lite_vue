@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Student Report Card</title>
+    <meta name="description" content="User Monthly Report"> 
+    <style type="text/css">
+        html {
+          color: #393939;
+          font-family: "Noto sans", sans-serif;
+          font-size: 11pt;
+          font-weight: 300;
+          line-height: 1.5;
+        }
+
+        h1 {
+          color: #b81ae8c0;
+          font-size: 38pt;
+          margin: 1cm 0cm 0 2cm;
+          margin-bottom: 1cm;
+          width: 100%;
+        }
+        h2, h3, h4 {
+          color: rgba(0, 0, 0, 0.761);
+          font-weight: 400;
+        }
+        h2 {
+          color: rgb(31, 199, 221);
+          break-before: always;
+          font-size: 28pt;
+          /* string-set: heading content(); */
+        }
+        h3 {
+          font-weight: 300;
+          font-size: 15pt;
+        }
+        h4 {
+          font-size: 13pt;
+        }
+
+        #cover {
+          align-content: space-between;
+          display: flex;
+          flex-wrap: wrap;
+          height: 75mm;
+        }
+
+        #contents footer {
+          background: #a1e65c;
+          flex: 1 50%;
+          margin: 0 -2cm;
+          padding: 1cm 0;
+          padding-left: 3cm;
+        }
+
+
+        #contents {
+          break-after: left;
+        }
+
+        #contents h2 {
+          font-size: 20pt;
+          font-weight: 400;
+          margin-bottom: 3cm;
+          margin-left: 5cm;
+          margin-top: 5cm;
+        }
+        #contents h3 {
+          font-weight: 500;
+          margin: 3em 0 1em;
+          margin-left: 3cm;
+          
+        }
+        #contents h3::before {
+          background: #82b965;
+          content: '';
+          display: block;
+          height: .08cm;
+          margin-bottom: .25cm;
+          width: 2cm;
+        }
+
+
+        
+    </style>  
+</head>
+<body>
+     <article id="cover">
+          <h1>BLOG LITE</h1>
+          <h1>Welcome {{data['name']}}</h1>
+    </article>
+
+    <article id="contents">
+      <h2 class="mb-3 fw-semibold lh-1">Monthly Report</h2>
+      <table>
+          <thead>
+            <h3>Total Number of Posts: {{data['posts_count']}}</h3>
+            <h3>Total Number of Followers: {{data['followers_count']}}</h3>
+            <h3>Total Number of Following: {{data['following_count']}}</h3>
+          </thead>
+      </table>
+      <footer>
+            owner@gmail.com | https://owner.com            
+          </footer>
+    </article>
+</body>
+</html>
